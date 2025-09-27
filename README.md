@@ -51,3 +51,131 @@ Transform your productivity with TaskMate - the ultimate AI-powered cross-platfo
 - Android SDK (API 35)
 
 ### Clone Repository
+git clone https://github.com/deboo92/taskmate.git
+cd TaskMate
+
+text
+
+### Install Dependencies
+flutter pub get
+
+text
+
+### Run the App
+Debug mode
+flutter run
+
+Release mode
+flutter run --release
+
+text
+
+## 🏗 Architecture
+
+TaskMate follows **Clean Architecture** principles with:
+
+- **BLoC Pattern** for state management
+- **Repository Pattern** for data access
+- **Dependency Injection** with Provider
+- **Modular Structure** for scalability
+
+lib/
+├── core/ # Core utilities and constants
+├── data/ # Data sources and repositories
+├── domain/ # Business logic and entities
+├── presentation/ # UI and BLoC components
+└── main.dart # App entry point
+
+text
+
+## 🔧 Configuration
+
+### Firebase Setup
+1. Create a new Firebase project
+2. Add your `google-services.json` to `android/app/`
+3. Configure authentication and analytics
+
+### Environment Variables
+Create a `.env` file in the root directory:
+API_BASE_URL=your_api_url
+OPENAI_API_KEY=your_openai_key
+ENCRYPTION_KEY=your_encryption_key
+
+text
+
+## 📦 Building for Release
+
+### Android App Bundle (Recommended)
+flutter build appbundle --release
+
+text
+
+### Android APK
+flutter build apk --release
+
+text
+
+## 🧪 Testing
+
+### Run All Tests
+flutter test
+
+text
+
+### Run Widget Tests
+flutter test test/widget_test.dart
+
+text
+
+### Run Integration Tests
+flutter drive --target=test_driver/app.dart
+
+text
+
+## 📊 Performance
+
+- **App Size**: ~52MB (optimized with R8)
+- **Startup Time**: <2 seconds
+- **Memory Usage**: <150MB average
+- **Battery Optimized**: Minimal background processing
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- **Website**: [https://deboo92.github.io/taskmate/](https://deboo92.github.io/taskmate/)
+- **Privacy Policy**: [Privacy Policy](https://deboo92.github.io/taskmate/taskmate_privacy_policy.html)
+- **Google Play**: [Download on Play Store](https://play.google.com/store/apps/details?id=com.malky.taskmate)
+- **Support**: [support@malky-apps.com](mailto:support@malky-apps.com)
+
+## 👨‍💻 Developer
+
+**Mahmoud Elmalky**
+- GitHub: [@deboo92](https://github.com/deboo92)
+- Email: [privacy@malky-apps.com](mailto:privacy@malky-apps.com)
+- Location: Alexandria, Egypt
+
+## 🙏 Acknowledgments
+
+- Flutter team for the amazing framework
+- Firebase for backend services
+- OpenAI for AI integration
+- Material Design for UI guidelines
+
+---
+
+**Made with ❤️ by Malky Apps**
+
+*TaskMate - Transform your productivity with AI*
