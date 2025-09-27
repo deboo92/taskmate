@@ -81,9 +81,13 @@ TaskMate follows **Clean Architecture** principles with:
 
 lib/
 ├── core/ # Core utilities and constants
+
 ├── data/ # Data sources and repositories
+
 ├── domain/ # Business logic and entities
+
 ├── presentation/ # UI and BLoC components
+
 └── main.dart # App entry point
 
 
