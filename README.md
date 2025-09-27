@@ -181,6 +181,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ by Malky Apps**
+**Made with ❤️ by Malky Dev**
 
 *TaskMate - Transform your productivity with AI*
