@@ -54,12 +54,12 @@ Transform your productivity with TaskMate - the ultimate AI-powered cross-platfo
 git clone https://github.com/deboo92/taskmate.git
 cd TaskMate
 
-text
+
 
 ### Install Dependencies
 flutter pub get
 
-text
+
 
 ### Run the App
 Debug mode
@@ -68,7 +68,7 @@ flutter run
 Release mode
 flutter run --release
 
-text
+
 
 ## 🏗 Architecture
 
@@ -86,7 +86,7 @@ lib/
 ├── presentation/ # UI and BLoC components
 └── main.dart # App entry point
 
-text
+
 
 ## 🔧 Configuration
 
@@ -101,36 +101,36 @@ API_BASE_URL=your_api_url
 OPENAI_API_KEY=your_openai_key
 ENCRYPTION_KEY=your_encryption_key
 
-text
+
 
 ## 📦 Building for Release
 
 ### Android App Bundle (Recommended)
 flutter build appbundle --release
 
-text
+
 
 ### Android APK
 flutter build apk --release
 
-text
+
 
 ## 🧪 Testing
 
 ### Run All Tests
 flutter test
 
-text
+
 
 ### Run Widget Tests
 flutter test test/widget_test.dart
 
-text
+
 
 ### Run Integration Tests
 flutter drive --target=test_driver/app.dart
 
-text
+
 
 ## 📊 Performance
 
