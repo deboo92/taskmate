@@ -80,6 +80,7 @@ TaskMate follows **Clean Architecture** principles with:
 - **Modular Structure** for scalability
 
 lib/
+
 ├── core/ # Core utilities and constants
 
 ├── data/ # Data sources and repositories
