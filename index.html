@@ -8,309 +8,248 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-        
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #64B5F6, #9C27B0);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
+        a { color: #556ee6; text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: rgba(255, 255, 255, 0.96); padding: 1rem 0; box-shadow: 0 2px 20px rgba(80,80,120,0.10); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.9rem; font-weight: bold; color: #667eea; }
+        .logo-icon { width: 40px; height: 40px; background: linear-gradient(135deg, #64B5F6, #9C27B0); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.4rem; font-weight: bold; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: #667eea; }
-        
-        /* Hero Section */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-        
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background: white;
-            color: #667eea;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-            background: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #667eea;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .header-content { flex-direction: column; gap: 1rem; }
-            nav ul { gap: 1rem; }
-        }
+        .hero { padding: 90px 0 40px; text-align: center; color: #fff; background: linear-gradient(135deg,#667eea 20%,#764ba2 100%);}
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem;}
+        .hero p { font-size: 1.3rem; margin-bottom: .7rem; opacity: 0.9; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+        .btn { padding: 15px 30px; border: none; border-radius: 50px; font-size: 1.1rem; font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer; }
+        .btn-primary { background: white; color: #667eea; box-shadow: 0 4px 15px rgba(0,0,0,0.14); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 21px rgba(0,0,0,0.18);}
+        .btn-secondary { background: transparent; color: white; border: 2px solid white;}
+        .btn-secondary:hover { background: white; color: #667eea;}
+        .badge-row img { margin: 0 6px 8px 0; }
+        h2.section-title { text-align: center; font-size: 2.6rem; margin-bottom: 2.2rem; color: #2b2553;font-weight:800;}
+        section {padding-bottom:18px;}
+        .features { padding: 65px 0; background: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .feature-card { text-align: center; padding: 2rem; border-radius: 15px;box-shadow:0 4px 18px rgba(120,140,180,0.07); transition: transform 0.3s; background: linear-gradient(120deg,#e4edfe 85%,#ede8f4);}
+        .feature-card:hover { transform: translateY(-5px);}
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem;}
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #333;}
+        .platforms { margin: 40px 0 0; text-align:center; }
+        .platforms span { margin:0 15px; font-size:1.1em;}
+        .block {background:linear-gradient(90deg,#eaeaff 70%,#f5f7fa);border-radius:12px;padding:26px 26px 12px;margin-top:26px;}
+        .code { background: #222; color: #f4f4fa; border-radius: 7px; padding: 8px 16px; margin: 10px 0; font-size: 1em; display:inline-block;}
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-links a { color: white; text-decoration: none; transition: color 0.3s;}
+        .footer-links a:hover { color: #667eea;}
+        footer { background: #2b2553; color: #fff; text-align: center; padding: 46px 0 28px; margin-top: 34px; }
+        @media (max-width: 768px){ .hero h1 {font-size:2.2rem;} .cta-buttons{flex-direction:column;} .header-content{flex-direction:column;gap:1rem;}nav ul{gap:.7rem;}.section-title{font-size:2rem;} }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">T</div>
-                    <span>TaskMate</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#download">Download</a></li>
-                        <li><a href="taskmate_privacy_policy.html">Privacy</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Meet TaskMate</h1>
-            <p>The AI-Powered Productivity Suite That Transforms How You Work</p>
-            <p>Smart notes, intelligent flashcards, advanced tasks, and AI chat - all in one beautiful app.</p>
-            
-            <div class="cta-buttons">
-                <a href="#download" class="btn btn-primary">Download Now</a>
-                <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Powerful Features</h2>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>AI-Powered Notes</h3>
-                    <p>Smart search, auto-organization, and context-aware suggestions make note-taking effortless.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>Intelligent Flashcards</h3>
-                    <p>Adaptive learning system that adjusts to your progress and optimizes study sessions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">✅</div>
-                    <h3>Smart Task Management</h3>
-                    <p>Priority suggestions, deadline tracking, and AI-powered productivity insights.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎤</div>
-                    <h3>Voice-to-Text</h3>
-                    <p>Capture ideas instantly with accurate voice recognition and smart transcription.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>AI Chat Assistant</h3>
-                    <p>Get help with your content, ask questions, and receive intelligent suggestions.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure & Private</h3>
-                    <p>End-to-end encryption, biometric authentication, and complete data privacy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-links">
-                <a href="taskmate_privacy_policy.html">Privacy Policy</a>
-                <a href="mailto:support@malky-apps.com">Support</a>
-                <a href="mailto:privacy@malky-apps.com">Privacy</a>
-            </div>
-            <p>&copy; 2025 TaskMate by Malky Apps. All rights reserved.</p>
-            <p>Developed by Mahmoud Elmalky | Alexandria, Egypt</p>
-        </div>
-    </footer>
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-icon">T</div>
+        <span>TaskMate</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#installation">Install</a></li>
+          <li><a href="taskmate_privacy_policy.html">Privacy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h1>🚀 TaskMate</h1>
+    <p>AI-Powered Productivity Suite for Flutter</p>
+    <div class="badge-row">
+      <a href="https://flutter.dev/" target="_blank"><img src="https://img.shields.io/badge/Flutter-3.8.1+-blue.svg" alt="Flutter"></a>
+      <a href="https://dart.dev/" target="_blank"><img src="https://img.shields.io/badge/Dart-3.0+-blue.svg" alt="Dart"></a>
+      <a href="https://developer.android.com/" target="_blank"><img src="https://img.shields.io/badge/Android-5.0+-green.svg" alt="Android"></a>
+      <a href="https://github.com/deboo92/taskmate/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT"></a>
+    </div>
+    <p style="max-width:470px;margin:18px auto 5px;">Transform your productivity with TaskMate - the ultimate AI-powered cross-platform app for notes, tasks, flashcards, and intelligent assistance.</p>
+    <div class="cta-buttons" style="margin-top:22px;">
+      <a href="https://github.com/deboo92/taskmate" target="_blank" class="btn btn-primary">GitHub Repo</a>
+      <a href="taskmate_privacy_policy.html" target="_blank" class="btn btn-secondary">Privacy Policy</a>
+    </div>
+  </div>
+</section>
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="section-title">✨ Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>AI-Powered Intelligence</h3>
+        <ul style="text-align:left;line-height:1.9;">
+          <li>Smart Notes: search, organize, context-aware</li>
+          <li>Intelligent Chat assistant</li>
+          <li>Voice-to-Text with high accuracy</li>
+          <li>Auto-Organization & Tagging</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Task Management</h3>
+        <ul style="text-align:left;line-height:1.9;">
+          <li>Priority Suggestions by AI</li>
+          <li>Deadline Tracking & Notifications</li>
+          <li>Progress Analytics</li>
+          <li>Cross-Device Sync</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3>Learning Tools</h3>
+        <ul style="text-align:left;line-height:1.9;">
+          <li>Adaptive Flashcards</li>
+          <li>Interactive Quizzes</li>
+          <li>Study Analytics</li>
+          <li>Spaced Repetition Learning</li>
+        </ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Security & Privacy</h3>
+        <ul style="text-align:left;line-height:1.9;">
+          <li>End-to-End Encryption</li>
+          <li>Biometric Authentication</li>
+          <li>Local Storage</li>
+          <li>Privacy First, No tracking</li>
+        </ul>
+      </div>
+    </div>
+    <div class="platforms">
+      <span>✅ Android 5.0+</span>
+      <span>🔄 iOS (Coming Soon)</span>
+      <span>🔄 Web (In Development)</span>
+      <span>🔄 Windows/macOS (Planned)</span>
+    </div>
+  </div>
+</section>
+<section id="installation" style="background:linear-gradient(100deg,#e7e7fa 82%,#f7f9fa 100%);padding:60px 0;">
+  <div class="container">
+    <h2 class="section-title">🛠 Installation</h2>
+    <h4>Prerequisites</h4>
+    <ul style="line-height:2;">
+      <li>Flutter SDK 3.8.1+</li>
+      <li>Dart SDK 3.0+</li>
+      <li>Android SDK (API 35)</li>
+      <li>VS Code / Android Studio</li>
+    </ul>
+    <h4 style="margin-top:20px;">Clone & Run</h4>
+    <pre class="code">git clone https://github.com/deboo92/taskmate.git
+cd TaskMate
+flutter pub get
+flutter run             # Debug
+flutter run --release   # Release
+    </pre>
+  </div>
+</section>
+<section style="background:#fff;padding:60px 0 20px;">
+  <div class="container">
+    <h2 class="section-title">🏗 Architecture</h2>
+    <p style="font-weight:600;margin-bottom:7px;">Clean Architecture:</p>
+    <pre class="code">
+lib/
+├── core/           # Core utilities and constants
+├── data/           # Data/repositories
+├── domain/         # Business logic
+├── presentation/   # UI & BLoC
+└── main.dart
+    </pre>
+    <ul>
+      <li>BLoC Pattern for state management</li>
+      <li>Repository Pattern for data access</li>
+      <li>Dependency Injection with Provider</li>
+      <li>Modular Structure</li>
+    </ul>
+  </div>
+</section>
+<section style="background:linear-gradient(120deg,#e8f0fe 70%,#ede9fe 100%);border-top:1px solid #dde4f5;padding:60px 0;">
+  <div class="container">
+    <h2 class="section-title">🔧 Configuration & Release</h2>
+    <div class="block">
+      <h4>Firebase Setup</h4>
+      <ul>
+        <li>Create Firebase project</li>
+        <li>Add <b>google-services.json</b> to <b>android/app/</b></li>
+        <li>Configure authentication & analytics</li>
+      </ul>
+      <h4 style="margin:19px 0 5px;">Environment Variables</h4>
+      <pre class="code">
+API_BASE_URL=your_api_url
+OPENAI_API_KEY=your_openai_key
+ENCRYPTION_KEY=your_encryption_key
+      </pre>
+      <h4>Build for Release</h4>
+      <pre class="code">
+flutter build appbundle --release
+flutter build apk --release
+      </pre>
+    </div>
+  </div>
+</section>
+<section style="background:#fff;padding:54px 0 12px;">
+  <div class="container">
+    <h2 class="section-title">🧪 Testing</h2>
+    <ul style="line-height:2;font-size:1.1em;">
+      <li><b>All Tests:</b> <code>flutter test</code></li>
+      <li><b>Widget Tests:</b> <code>flutter test test/widget_test.dart</code></li>
+      <li><b>Integration:</b> <code>flutter drive --target=test_driver/app.dart</code></li>
+    </ul>
+  </div>
+</section>
+<section style="padding:34px 0 0;background:linear-gradient(118deg,#e7eaf4 70%,#ffffff 100%);">
+  <div class="container">
+    <h2 class="section-title">📊 Performance</h2>
+    <ul style="font-size:1.07em;line-height:2;margin-bottom:12px;">
+      <li>App Size: ~52MB</li>
+      <li>Startup: under 2s</li>
+      <li>Battery/Background: optimized</li>
+    </ul>
+  </div>
+</section>
+<section id="contact" style="background:#fff;padding:40px 0 6px;">
+  <div class="container">
+    <h2 class="section-title">🤝 Contributing & Contact</h2>
+    <p style="font-size:1.11em;line-height:2;">
+      We welcome your contributions!  
+      See the <a href="https://github.com/deboo92/taskmate/blob/main/CONTRIBUTING.md" style="color:#667eea;">Contributing Guidelines</a>
+      <br>
+      Email: <a href="mailto:support@malky-apps.com">support@malky-apps.com</a>
+    </p>
+    <p><b>Developer:</b> Mahmoud Elmalky | Alexandria, Egypt<br>
+      GitHub: <a href="https://github.com/deboo92">@deboo92</a> |
+      Email: <a href="mailto:privacy@malky-apps.com">privacy@malky-apps.com</a></p>
+    <div style="margin-top:12px;font-size:0.98em;">
+      <b>Links:</b>
+      <a href="https://deboo92.github.io/taskmate/" style="margin:0 10px;">Landing Page</a>
+      <a href="https://deboo92.github.io/taskmate/taskmate_privacy_policy.html" style="margin:0 10px;">Privacy Policy</a>
+      <a href="https://play.google.com/store/apps/details?id=com.malky.taskmate" style="margin:0 10px;">Google Play (Soon)</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div>
+    <b>© 2025 TaskMate by Malky Apps</b><br>
+    Made with ❤️ by <b>Malky Dev</b><br>
+    *TaskMate - Transform your productivity with AI*
+  </div>
+</footer>
 </body>
 </html>
