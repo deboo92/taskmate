@@ -4,147 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskMate Privacy Policy</title>
-    <meta name="description" content="TaskMate Privacy Policy - protecting your privacy and explaining how voice data is handled.">
+    <meta name="description" content="TaskMate Privacy Policy - Full transparency on how we handle your voice data and privacy.">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         :root {
-            --main-grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --accent: #667eea;
-            --purple: #764ba2;
-            --bg: #f7f8fa;
+            --accent2: #764ba2;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--bg);
-            color: #222;
+            background: linear-gradient(120deg, var(--accent) 0%, var(--accent2) 100%);
             margin: 0;
+            min-height: 100vh;
         }
-        .header {
-            background: var(--main-grad);
-            color: white;
-            padding: 48px 0 18px 0;
+        .top-hero {
+            background: linear-gradient(135deg, var(--accent) 70%, var(--accent2) 100%);
             text-align: center;
-            box-shadow: 0 2px 16px rgba(70,70,190,.06);
+            color: #fff;
+            padding: 65px 0 40px 0;
+            position:relative;
         }
-        .header-logo {
-            background: linear-gradient(135deg, #64B5F6, #9C27B0);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height:48px;
+        .logo-circle {
+            width: 56px; height: 56px;
+            background: linear-gradient(120deg, #fff 60%, #cbb2fd 100%);
+            margin: 0 auto 12px;
             border-radius: 50%;
-            font-size: 2rem;
-            margin-bottom: 10px;
-            font-weight: 800;
-            box-shadow: 0 2px 9px 3px rgba(102,126,234,0.17);
-            letter-spacing:1px;
+            font-size: 2.1rem;
+            display: flex; align-items:center; justify-content:center;
+            box-shadow: 0 2px 18px rgba(102,110,234,0.16);
+            color: var(--accent2); font-weight: bold;
         }
-        .hero-title {
-            margin: 0;
+        .main-title {
             font-size: 2.7rem;
-            font-weight: 800;
-            letter-spacing: 1px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            letter-spacing: .6px;
+            text-shadow:0 3px 14px #602fa622;
         }
         .hero-date {
-            color: #f3d6ff;
-            font-size: .97rem;
+            font-size: 1.01rem;
+            color: #ece2fb;
+            letter-spacing: .2px;
+            font-weight: 500;
         }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 19px;
-            box-shadow: 0 2px 24px rgba(66,60,130,0.07);
-            margin-top: -25px;
-            margin-bottom: 45px;
-            padding: 42px 24px 32px;
+        .policy-card {
+            background: rgba(255,255,255,0.93);
+            margin: -38px auto 36px;
+            max-width: 660px;
+            border-radius: 22px;
+            box-shadow: 0 4px 34px 0 rgba(120,110,230,0.09),0 1.2px 0px #ecddffd7;
+            padding: 38px 32px 28px 32px;
+        }
+        .note-box {
+            background: linear-gradient(120deg, #857be7 86%, #f6f2ff 100%);
+            color: #fff;
+            border-radius:16px;
+            font-size:1.14em;
+            font-weight:500;
+            margin-bottom: 23px;
+            padding: 18px 18px 14px 20px;
+            box-shadow: 0 2px 16px #e1d8ff55;
+            border-left: 6px solid var(--accent2);
         }
         h2 {
-            color: #6a51e6;
-            font-size: 1.5rem;
-            border-left: 5px solid #8f62fe;
-            padding-left: 9px;
-            margin-top: 36px;
-            margin-bottom:16px;
+            color: var(--accent2);
+            font-size: 1.33rem;
+            display:flex;
+            align-items:center;
+            font-weight: 800;
+            letter-spacing:.1px;
+            margin-top:28px; margin-bottom:12px;
         }
-        ul {
-            margin-bottom:0;
+        h2 svg {margin-right:10px;}
+        .section {border-left: 4px solid #a084fa;padding-left:13px; margin-bottom:20px;background: #f8f7ff;border-radius:10px;}
+        ul.list{
+            margin:0; margin-bottom:3px; padding-left:24px;
         }
-        ul li {
-            margin-bottom:8px;
-        }
-        .box {
-            background: #f7f8fa;
-            border-radius:12px;
-            box-shadow:0 1px 8px #f6f3fc;
-            padding:20px;
-            margin:24px 0;
-        }
-        .contact-info {
-            background: var(--main-grad);
-            color: #fff;
-            border-radius: 13px;
-            padding: 28px 14px 12px;
-            margin: 32px 0 18px;
-            line-height: 1.85;
-            font-size: 1.12em;
-            letter-spacing:.4px;
+        ul.list li{line-height:2.1; font-size:1.05em;}
+        .contact-box {
+            margin:32px 0 9px;
+            background:linear-gradient(120deg,#d7caff,#f1e4fd 100%);
+            padding:21px 18px 12px;
+            border-radius:10px;
+            color: #422d8b;
+            font-size:1.12em;
+            letter-spacing:.3px;
+            box-shadow:0 2px 14px #ece3ff;
         }
         .footer {
             text-align: center;
-            color: #8580b5;
-            font-size: 0.98em;
-            margin:46px 0 20px;
+            color: #b3a6d8;
+            font-size: 1.05em;
+            margin:31px 0 15px;
         }
-        @media(max-width:600px){
-            .container{padding:19px 4vw;}
-            .hero-title{font-size:1.5rem;}
-            h2 {font-size:1.2rem;}
+        @media(max-width:700px){
+            .policy-card{padding:18px 7vw;}
+            .main-title{font-size:1.1rem;}
+            h2{font-size:1.1rem;}
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="header-logo">T</div>
-        <div class="hero-title">TaskMate Privacy Policy</div>
+    <div class="top-hero">
+        <div class="logo-circle">T</div>
+        <div class="main-title">TaskMate Privacy Policy</div>
         <div class="hero-date">Last updated: <b>September 27, 2025</b></div>
     </div>
-
-    <div class="container">
-        <div class="box" style="background:var(--main-grad);color:#fff;box-shadow:0 4px 30px #c3bdfa45;">
-            <b>Your privacy is our priority.</b> TaskMate is designed to keep your voice data safe and on your device.
+    <div class="policy-card">
+        <div class="note-box">
+            <b>Your privacy is our priority.</b>
+            TaskMate is designed to keep your voice data safe and on your device.
         </div>
-        <h2>🎙️ Audio Recording Permission</h2>
-        <ul>
-            <li><b>Purpose:</b> RECORD_AUDIO is used <u>only</u> for voice-to-text quick note taking and task creation.</li>
-            <li><b>Data Collection:</b> Your audio is processed <b>locally</b> on your device and is never uploaded.</li>
-            <li><b>Storage:</b> No audio recordings are permanently stored.</li>
-            <li><b>Sharing:</b> Audio data is never shared with any third parties.</li>
-        </ul>
+        <div class="section">
+            <h2>
+                <svg height="1.2em" viewBox="0 0 24 24" style="fill: #b18afd;" xmlns="http://www.w3.org/2000/svg"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm1 13.93v-2.02a2.99 2.99 0 1 0-2 0v2.02A7.002 7.002 0 0 1 5.07 13H7.06a8 8 0 0 0 0-2H5.07A7.002 7.002 0 0 1 11 4.07V6.98a2.99 2.99 0 1 0 2 0V4.07A7.002 7.002 0 0 1 18.93 11h-2.02a8 8 0 0 0 0 2h2.02A7.002 7.002 0 0 1 13 19.93ZM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
+                Audio Recording Permission
+            </h2>
+            <ul class="list">
+                <li><b>Purpose:</b> <span style="color:#764ba2;">RECORD_AUDIO</span> is used <u>only</u> for voice-to-text quick note taking and task creation.</li>
+                <li><b>Data Collection:</b> Your audio is processed <b>locally</b> on your device and is never uploaded.</li>
+                <li><b>Storage:</b> No audio recordings are permanently stored.</li>
+                <li><b>Sharing:</b> Audio data is never shared with any third parties.</li>
+            </ul>
+        </div>
 
-        <h2>🛡️ Data Security</h2>
-        <ul>
-            <li><b>On-device only:</b> All voice recognition uses Android’s built-in speech engine. No audio leaves your device.</li>
-            <li><b>Encryption:</b> All your notes and tasks can be protected by biometric authentication and device encryption.</li>
-        </ul>
+        <div class="section">
+            <h2>
+                <svg height="1.2em" viewBox="0 0 24 24" style="fill:#59d6e7;margin-right:8px;" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" opacity=".2"/><path d="M8 11V9.5C8 8.12 9.12 7 10.5 7h3A2.5 2.5 0 0 1 16 9.5V11H8Zm-1 1h10a1 1 0 0 1 1 1v.5A1.5 1.5 0 0 1 16.5 15h-9A1.5 1.5 0 0 1 6 13.5V13a1 1 0 0 1 1-1Z"/></svg>
+                Data Security
+            </h2>
+            <ul class="list">
+                <li><b>On-device only:</b> All voice recognition uses Android’s built-in speech engine. No audio ever leaves your device.</li>
+                <li><b>Encryption:</b> Your notes and tasks can be protected by biometric authentication and device encryption.</li>
+            </ul>
+        </div>
 
-        <h2>⚙️ Your Rights & Control</h2>
-        <ul>
-            <li>You can always disable voice input in TaskMate settings without losing other app features.</li>
-            <li>You’re in full control—no data mining, no unwanted tracking, ever.</li>
-        </ul>
+        <div class="section">
+            <h2>
+                <svg height="1.2em" style="fill:#e1ad5a;margin-right:8px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 2A9.5 9.5 0 1 1 2 11.5 9.51 9.51 0 0 1 11.5 2m0-2C5.15 0 0 5.15 0 11.5S5.15 23 11.5 23 23 17.85 23 11.5 17.85 0 11.5 0Zm.32 7.14v5.36A1.18 1.18 0 0 1 12 13a1.15 1.15 0 0 1-.18-.02V7.14a1.18 1.18 0 1 1 .18.02ZM10.66 17h1.68v1.65h-1.68V17Z"/></svg>
+                Your Rights & Control
+            </h2>
+            <ul class="list">
+                <li>You can always disable voice input in TaskMate settings without losing other app features.</li>
+                <li>You're in full control—no data mining, tracking, or unwanted collection, ever.</li>
+            </ul>
+        </div>
 
-        <div class="contact-info">
+        <div class="contact-box">
             <b>Contact Us</b><br>
-            Any privacy questions? Email: <a style="color:#fff;text-decoration:underline;" href="mailto:privacy@malky-apps.com">privacy@malky-apps.com</a>
+            Questions on privacy? Email:
+            <a style="color:#4c3cc4;text-decoration:underline;font-weight:600;" href="mailto:privacy@malky-apps.com">privacy@malky-apps.com</a>
             <br>
-            <span style="font-size:0.99em;">Malky Apps - Mahmoud Elmalky<br>Alexandria, Egypt</span>
+            <span style="font-size:.98em;">Malky Apps — Mahmoud Elmalky<br>Alexandria, Egypt</span>
         </div>
     </div>
-
     <div class="footer">
-        <b>TaskMate &copy; 2025 Malky Apps</b> &mdash; Crafted with care and transparency
+        &copy; 2025 <b>TaskMate</b> by Malky Apps — Ethically crafted with 💜
     </div>
 </body>
 </html>
