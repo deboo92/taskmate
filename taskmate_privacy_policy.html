@@ -4,37 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskMate Privacy Policy</title>
+    <meta name="description" content="TaskMate Privacy Policy - protecting your privacy and explaining how voice data is handled.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-        h1, h2 { color: #333; }
-        .container { max-width: 800px; margin: 0 auto; }
+        :root {
+            --main-grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --accent: #667eea;
+            --purple: #764ba2;
+            --bg: #f7f8fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: #222;
+            margin: 0;
+        }
+        .header {
+            background: var(--main-grad);
+            color: white;
+            padding: 48px 0 18px 0;
+            text-align: center;
+            box-shadow: 0 2px 16px rgba(70,70,190,.06);
+        }
+        .header-logo {
+            background: linear-gradient(135deg, #64B5F6, #9C27B0);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height:48px;
+            border-radius: 50%;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            box-shadow: 0 2px 9px 3px rgba(102,126,234,0.17);
+            letter-spacing:1px;
+        }
+        .hero-title {
+            margin: 0;
+            font-size: 2.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .hero-date {
+            color: #f3d6ff;
+            font-size: .97rem;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 19px;
+            box-shadow: 0 2px 24px rgba(66,60,130,0.07);
+            margin-top: -25px;
+            margin-bottom: 45px;
+            padding: 42px 24px 32px;
+        }
+        h2 {
+            color: #6a51e6;
+            font-size: 1.5rem;
+            border-left: 5px solid #8f62fe;
+            padding-left: 9px;
+            margin-top: 36px;
+            margin-bottom:16px;
+        }
+        ul {
+            margin-bottom:0;
+        }
+        ul li {
+            margin-bottom:8px;
+        }
+        .box {
+            background: #f7f8fa;
+            border-radius:12px;
+            box-shadow:0 1px 8px #f6f3fc;
+            padding:20px;
+            margin:24px 0;
+        }
+        .contact-info {
+            background: var(--main-grad);
+            color: #fff;
+            border-radius: 13px;
+            padding: 28px 14px 12px;
+            margin: 32px 0 18px;
+            line-height: 1.85;
+            font-size: 1.12em;
+            letter-spacing:.4px;
+        }
+        .footer {
+            text-align: center;
+            color: #8580b5;
+            font-size: 0.98em;
+            margin:46px 0 20px;
+        }
+        @media(max-width:600px){
+            .container{padding:19px 4vw;}
+            .hero-title{font-size:1.5rem;}
+            h2 {font-size:1.2rem;}
+        }
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-logo">T</div>
+        <div class="hero-title">TaskMate Privacy Policy</div>
+        <div class="hero-date">Last updated: <b>September 27, 2025</b></div>
+    </div>
+
     <div class="container">
-        <h1>TaskMate Privacy Policy</h1>
-        <p><strong>Last updated:</strong> September 27, 2025</p>
-        
-        <h2>Audio Recording Permission</h2>
-        <p>TaskMate uses the RECORD_AUDIO permission exclusively for voice-to-text functionality to help you create notes and tasks quickly.</p>
-        
+        <div class="box" style="background:var(--main-grad);color:#fff;box-shadow:0 4px 30px #c3bdfa45;">
+            <b>Your privacy is our priority.</b> TaskMate is designed to keep your voice data safe and on your device.
+        </div>
+        <h2>🎙️ Audio Recording Permission</h2>
         <ul>
-            <li><strong>Data Collection:</strong> Audio is processed locally on your device only</li>
-            <li><strong>Storage:</strong> No audio recordings are permanently stored</li>
-            <li><strong>Sharing:</strong> Audio data is never shared with third parties</li>
-            <li><strong>Purpose:</strong> Converting speech to text for productivity features only</li>
+            <li><b>Purpose:</b> RECORD_AUDIO is used <u>only</u> for voice-to-text quick note taking and task creation.</li>
+            <li><b>Data Collection:</b> Your audio is processed <b>locally</b> on your device and is never uploaded.</li>
+            <li><b>Storage:</b> No audio recordings are permanently stored.</li>
+            <li><b>Sharing:</b> Audio data is never shared with any third parties.</li>
         </ul>
-        
-        <h2>Data Security</h2>
-        <p>All voice processing happens on-device using Android's built-in speech recognition. No audio leaves your device.</p>
-        
-        <h2>Your Rights</h2>
-        <p>You can disable voice features at any time in the app settings without affecting other functionality.</p>
-        
-        <h2>Contact Us</h2>
-        <p>For privacy questions, contact: <strong>privacy@malky-apps.com</strong></p>
-        
-        <p><em>Malky Apps - Mahmoud Elmalky<br>Alexandria, Egypt</em></p>
+
+        <h2>🛡️ Data Security</h2>
+        <ul>
+            <li><b>On-device only:</b> All voice recognition uses Android’s built-in speech engine. No audio leaves your device.</li>
+            <li><b>Encryption:</b> All your notes and tasks can be protected by biometric authentication and device encryption.</li>
+        </ul>
+
+        <h2>⚙️ Your Rights & Control</h2>
+        <ul>
+            <li>You can always disable voice input in TaskMate settings without losing other app features.</li>
+            <li>You’re in full control—no data mining, no unwanted tracking, ever.</li>
+        </ul>
+
+        <div class="contact-info">
+            <b>Contact Us</b><br>
+            Any privacy questions? Email: <a style="color:#fff;text-decoration:underline;" href="mailto:privacy@malky-apps.com">privacy@malky-apps.com</a>
+            <br>
+            <span style="font-size:0.99em;">Malky Apps - Mahmoud Elmalky<br>Alexandria, Egypt</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <b>TaskMate &copy; 2025 Malky Apps</b> &mdash; Crafted with care and transparency
     </div>
 </body>
 </html>
